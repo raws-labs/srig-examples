@@ -10,3 +10,8 @@ __pycache__/
 *.tape
 *.mp4
 demo-sim.py
+
+# Ignore dotfiles and dotfolders (local tooling state); keep the tracked ones.
+.*
+!.gitignore
+!.github/
