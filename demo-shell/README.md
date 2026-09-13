@@ -39,6 +39,20 @@ typing and comes back a minute after the last keystroke. Opening a serial port
 glitches the line and the board reads a byte nobody sent, so only real
 characters count as input: otherwise attaching to a board would silence it.
 
+## Test it
+
+`demo-shell/test` runs the same three assertions on all four chips, using the
+images from the latest release, so it needs no toolchain:
+
+```bash
+pip install siliconrig pytest
+export SRIG_API_KEY=key_...
+pytest demo-shell/test -v      # 12 passed in about a minute
+```
+
+Set `SRIG_FIRMWARE_DIR` to a directory of locally built images to test those
+instead.
+
 ## Build
 
 Each port writes its artifact into its own `build/`.
