@@ -33,6 +33,8 @@ pytest demo-shell/test -v
 |---|---|---|
 | [`demo-shell/`](demo-shell) | an interactive serial shell on every board type, and a pytest suite that runs the same assertions on all four | one board, no toolchain |
 | [`esp-now-demo/`](esp-now-demo) | two boards talking over ESP-NOW, with assertions on reception, RSSI and packet loss | two esp32-s3 boards, ESP-IDF |
+| [`micropython/`](micropython) | MicroPython on every board type, so a session starts on a REPL instead of a blank board | one board; ESP-IDF and arm-none-eabi-gcc to build |
+| [`zephyr/`](zephyr) | a Zephyr shell with the kernel, device and hwinfo commands, on the three board types it reaches today | one board; west and the Zephyr SDK to build |
 
 `demo-shell` is also the firmware the boards run when nothing else is loaded, so
 a fresh session already answers `help`.
@@ -56,6 +58,6 @@ firmware that formats for humans.
 
 ## Docs
 
-[Quickstart](https://siliconrig.dev/docs/getting-started/quickstart) ·
-[Python SDK](https://siliconrig.dev/docs/guides/python-sdk) ·
+[Quickstart](https://siliconrig.dev/docs/getting-started/quickstart) |
+[Python SDK](https://siliconrig.dev/docs/guides/python-sdk) |
 [CI/CD](https://siliconrig.dev/docs/guides/cicd)
